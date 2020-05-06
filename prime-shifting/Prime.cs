@@ -26,10 +26,14 @@ namespace PrimeShifting
    public List<int> FindPrimeNums(List<int> listInt)
    {
      int max = listInt.Last();
-     for (int prime = 2; prime < max; prime++)
+     for (int prime = 2; prime <= max; prime++)
      {
-       for (int i = 2; i < max; i++){
-         listInt.Remove(prime*i);
+       for (int i = 2; i * i <= prime; i++)
+       {
+         if (prime % i == 0)
+         {
+           listInt.Remove(prime);
+         }
        }
      }
      return listInt;
