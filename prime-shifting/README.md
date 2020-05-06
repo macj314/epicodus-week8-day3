@@ -21,7 +21,7 @@ This program requires .NET to be installed.
   * Input: 10
   * Output: 2,3,4,5,...,10
 * Create a method to remove the non-prime numbers from the list of numbers.
-  * Create variable that will be used to represent prime numbers. Multiply this variable by every number under the user's enetered number. Increment prime variable and repeat the process until the prime variable is equal to user's number.
+  * Create variable that will be used to go through each entry of the entered list of numbers. For each entry check divisors up to the square root of the largest number. If there are no remainders, then the number isn't prime. If that's the case, remove the number from the list.
 
 ## Technologies Used
 
