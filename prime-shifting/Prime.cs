@@ -1,5 +1,7 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
+
 
 namespace PrimeShifting
 {
@@ -19,6 +21,18 @@ namespace PrimeShifting
        listNumbers.Add(i);
      }
      return listNumbers;
-   } 
+   }
+
+   public List<int> FindPrimeNums(List<int> listInt)
+   {
+     int max = listInt.Last();
+     for (int prime = 2; prime < max; prime++)
+     {
+       for (int i = 2; i < max; i++){
+         listInt.Remove(prime*i);
+       }
+     }
+     return listInt;
+   }
   }
 }
