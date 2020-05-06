@@ -12,11 +12,12 @@ namespace PrimeShifting
       if (int.TryParse(inputString, out int inputInt)) {
         Prime maxInt = new Prime(inputInt);
         List<int> listInt = maxInt.CreateList();
+        listInt = maxInt.FindPrimeNums(listInt);
+        Console.WriteLine("List of prime numbers: | ");
         foreach (int i in listInt)
         {
-          Console.WriteLine(i);
+          Console.Write(i + ", ");
         }
-        //Call method that returns list of prime numbers. Param (list)
       } 
       else 
       {
