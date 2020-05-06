@@ -1,11 +1,20 @@
+using System;
+using System.Collections.Generic;
+
 namespace PrimeShifting
 {
   public class Prime
   {
-   public static List<int> createList(int input)
+    private int _input;
+
+    public Prime(int input){
+      _input = input;
+    }
+
+   public List<int> CreateList()
    {
      List<int> listNumbers = new List<int>();
-     for (int i = 2; i < input; i++)
+     for (int i = 2; i <= _input; i++)
      {
        listNumbers.Add(i);
      }
