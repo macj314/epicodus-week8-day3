@@ -28,9 +28,19 @@ namespace Dealership.Models
       return _makeModel;
     }
 
+        public void SetPrice(int newPrice)
+    {
+      _price = newPrice;
+    }
+
     public bool WorthBuying(int maxPrice, int maxMile)
     {
       return (_price < maxPrice && _miles < maxMile);
+    }
+
+    public static string MakeSound(string sound)
+    {
+      return "Our cars sound like " + sound;
     }
   }
 }
